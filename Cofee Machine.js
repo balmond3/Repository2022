@@ -1,5 +1,5 @@
 const input = require('sync-input')
-
+console.log("hello changes")
 
 
 let availableWater = 400; // mL

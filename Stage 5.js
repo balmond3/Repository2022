@@ -1,4 +1,4 @@
-const input = require('readline-sync')
+const input = require('prompt-sync')();
 
 
 
@@ -14,7 +14,7 @@ function mainmenu() {
     let actions = ["buy", "fill", "take", "remaining", "exit"];
     let action = "";
     while (!actions.includes(action)) {
-        action = input.question("Write action (buy, fill, take, remaining, exit):");
+        action = input("Write action (buy, fill, take, remaining, exit):");
     }
 
 
@@ -51,10 +51,10 @@ function outputState() {
 
 function fill() {
 
-    availableWater += parseInt(input.question("Write how many ml of water you want to add:"));
-    availableMilk += parseInt(input.question("Write how many ml of milk you want to add:"));
-    availableBeans += parseInt(input.question("Write how many grams of coffee beans you want to add:"));
-    availableCups += parseInt(input.question("Write how many disposable coffee cups you want to add:"));
+    availableWater += parseInt(input("Write how many ml of water you want to add:"));
+    availableMilk += parseInt(input("Write how many ml of milk you want to add:"));
+    availableBeans += parseInt(input("Write how many grams of coffee beans you want to add:"));
+    availableCups += parseInt(input("Write how many disposable coffee cups you want to add:"));
     mainmenu();
 }
 
@@ -62,7 +62,7 @@ function buy() {
     let menu = ["1", "2", "3", "back","exit","remaining"];
     let choice = "";
     while (!menu.includes(choice)) {
-        choice = input.question("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu: ");
+        choice = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu: ");
     }
 
     switch (choice) {

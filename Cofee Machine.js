@@ -1,4 +1,4 @@
-const input = require('sync-input')
+const input = require('prompt-sync')();
 
 
 
